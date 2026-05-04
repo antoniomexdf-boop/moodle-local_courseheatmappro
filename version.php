@@ -16,13 +16,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-/**
- * Version metadata for local_courseheatmappro.
- *
- * @package   local_courseheatmappro
- * @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+// Version metadata for local_courseheatmappro.
 
 $plugin->component = 'local_courseheatmappro';
 $plugin->version = 2026050402;

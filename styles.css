@@ -8,7 +8,7 @@
 
 .lchp-shell {
     --lchp-bg: #eef4fb;
-    --lchp-surface: #ffffff;
+    --lchp-surface: #fff;
     --lchp-border: #d0dcee;
     --lchp-text: #16212f;
     --lchp-muted: #5b6876;
@@ -19,7 +19,7 @@
     color: var(--lchp-text);
     background:
         radial-gradient(circle at top right, rgba(47, 128, 237, 0.08), transparent 30%),
-        linear-gradient(180deg, var(--lchp-bg), #ffffff 70%);
+        linear-gradient(180deg, var(--lchp-bg), #fff 70%);
     border: 1px solid var(--lchp-border);
     border-radius: 20px;
     padding: 28px;
@@ -118,7 +118,7 @@
 }
 
 .lchp-countbutton:focus-visible {
-    outline: 2px solid color-mix(in srgb, var(--lchp-medium) 60%, white);
+    outline: 2px solid rgba(47, 128, 237, 0.6);
     outline-offset: 3px;
     border-radius: 4px;
 }
@@ -278,8 +278,8 @@
 .is-high.lchp-heatmapitem,
 .is-high.lchp-distribution__card,
 .is-high.lchp-distribution__segment {
-    border-color: color-mix(in srgb, var(--lchp-high) 70%, var(--lchp-border));
-    background: color-mix(in srgb, var(--lchp-high) 16%, white);
+    border-color: #6ecf9b;
+    background-color: rgba(42, 163, 107, 0.16);
 }
 
 .is-medium .lchp-legend__swatch,
@@ -287,8 +287,8 @@
 .is-medium.lchp-heatmapitem,
 .is-medium.lchp-distribution__card,
 .is-medium.lchp-distribution__segment {
-    border-color: color-mix(in srgb, var(--lchp-medium) 70%, var(--lchp-border));
-    background: color-mix(in srgb, var(--lchp-medium) 16%, white);
+    border-color: #7db1f5;
+    background-color: rgba(47, 128, 237, 0.16);
 }
 
 .is-low .lchp-legend__swatch,
@@ -296,8 +296,8 @@
 .is-low.lchp-heatmapitem,
 .is-low.lchp-distribution__card,
 .is-low.lchp-distribution__segment {
-    border-color: color-mix(in srgb, var(--lchp-low) 70%, var(--lchp-border));
-    background: color-mix(in srgb, var(--lchp-low) 16%, white);
+    border-color: #f4b36f;
+    background-color: rgba(240, 138, 36, 0.16);
 }
 
 .is-none .lchp-legend__swatch,
@@ -305,8 +305,8 @@
 .is-none.lchp-heatmapitem,
 .is-none.lchp-distribution__card,
 .is-none.lchp-distribution__segment {
-    border-color: color-mix(in srgb, var(--lchp-none) 70%, var(--lchp-border));
-    background: color-mix(in srgb, var(--lchp-none) 16%, white);
+    border-color: #e58b95;
+    background-color: rgba(209, 73, 91, 0.16);
 }
 
 .is-nocompletion .lchp-legend__swatch,
@@ -314,8 +314,8 @@
 .is-nocompletion.lchp-heatmapitem,
 .is-nocompletion.lchp-distribution__card,
 .is-nocompletion.lchp-distribution__segment {
-    border-color: color-mix(in srgb, #60738a 70%, var(--lchp-border));
-    background: color-mix(in srgb, #60738a 16%, white);
+    border-color: #90a2b4;
+    background-color: rgba(96, 115, 138, 0.16);
 }
 
 .lchp-distribution {

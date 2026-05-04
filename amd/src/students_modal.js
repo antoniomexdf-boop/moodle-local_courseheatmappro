@@ -76,11 +76,9 @@ define(
             return;
         }
 
-        createModal().then(function(modal) {
-            return setLoading(modal).then(function() {
-                modal.show();
-                return loadStudents(modal, courseid, cmid, listtype);
-            });
+        createModal().then(setLoading).then(function(modal) {
+            modal.show();
+            return loadStudents(modal, courseid, cmid, listtype);
         }).catch(Notification.exception);
     };
 
