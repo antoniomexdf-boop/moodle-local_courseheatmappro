@@ -47,3 +47,9 @@
 - Fixed PHPCS and PHPDoc issues in core plugin entry points and autoloaded classes.
 - Added missing file docblocks for CI-sensitive PHP files.
 - Cleaned release metadata for the next validation pass.
+
+## 0.2.7
+
+- Fixed the remaining PHPDoc checker complaints in `engagement_service`.
+- Bumped release metadata and XMLDB version for the validation fix.
+- Aligned the changelog and README with the new release state.

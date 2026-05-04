@@ -359,11 +359,11 @@ class engagement_service {
      *
      * @param int $courseid
      * @param \cm_info $cm
-     * @param stdClass $sectioninfo
-     * @param array<int, int> $completionenabled
-     * @param array<int, int> $completioncounts
-     * @param array<int, int> $gradecounts
-     * @param array<int, int> $gradeavailable
+     * @param \section_info $sectioninfo
+     * @param array $completionenabled
+     * @param array $completioncounts
+     * @param array $gradecounts
+     * @param array $gradeavailable
      * @param int $enrolledcount
      * @param bool $hidden
      * @return array<string, mixed>
@@ -1002,7 +1002,7 @@ class engagement_service {
      * @param stdClass $course
      * @param string $activityname
      * @param string $listtype
-     * @param array<int, array<string, string>> $students
+     * @param array $students
      * @param bool $showemail
      * @param bool $showcompletiondate
      * @param bool $showgrade
