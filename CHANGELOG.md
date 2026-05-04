@@ -41,3 +41,9 @@
 - Bumped version metadata for the follow-up CI cleanup pass.
 - Refined template example contexts and dashboard validation data.
 - Aligned release notes, XMLDB version, and upgrade savepoint with the current package state.
+
+## 0.2.6
+
+- Fixed PHPCS and PHPDoc issues in core plugin entry points and autoloaded classes.
+- Added missing file docblocks for CI-sensitive PHP files.
+- Cleaned release metadata for the next validation pass.

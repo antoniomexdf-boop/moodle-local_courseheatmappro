@@ -32,7 +32,7 @@ class export_history_service {
      * @param stdClass $course
      * @param string $exporttype
      * @param string $filename
-     * @param array<string, mixed> $filters
+     * @param array $filters
      * @return void
      */
     public function record_export(stdClass $course, string $exporttype, string $filename, array $filters): void {

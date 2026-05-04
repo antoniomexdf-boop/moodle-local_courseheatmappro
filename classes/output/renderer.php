@@ -27,7 +27,7 @@ class renderer extends \plugin_renderer_base {
     /**
      * Render the dashboard template.
      *
-     * @param array<string, mixed> $data
+     * @param array $data
      * @return string
      */
     public function render_dashboard(array $data): string {

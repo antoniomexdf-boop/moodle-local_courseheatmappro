@@ -27,7 +27,7 @@ class export_service {
     /**
      * Build export rows from dashboard data.
      *
-     * @param array<string, mixed> $dashboarddata
+     * @param array $dashboarddata
      * @return array<int, array<string, string>>
      */
     public function build_rows(array $dashboarddata): array {

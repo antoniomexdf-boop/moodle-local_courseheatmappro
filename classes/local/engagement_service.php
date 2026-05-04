@@ -65,8 +65,10 @@ class engagement_service {
         global $USER;
 
         $systemcontext = \context_system::instance();
-        if ($userid === (int)$USER->id &&
-                (is_siteadmin($USER->id) || has_capability('local/courseheatmappro:view', $systemcontext))) {
+        if (
+            $userid === (int)$USER->id
+            && (is_siteadmin($USER->id) || has_capability('local/courseheatmappro:view', $systemcontext))
+        ) {
             $courses = get_courses('all', 'c.fullname ASC', 'c.*');
         } else {
             $courses = get_user_capability_course(
@@ -97,7 +99,7 @@ class engagement_service {
     /**
      * Build course selector options for the dashboard.
      *
-     * @param array<int, stdClass> $courses
+     * @param array $courses
      * @param int $selectedcourseid
      * @return array<int, array<string, mixed>>
      */
@@ -461,7 +463,7 @@ class engagement_service {
      * Summarise a section from its activities.
      *
      * @param \section_info $sectioninfo
-     * @param array<int, array<string, mixed>> $activities
+     * @param array $activities
      * @return array<string, mixed>
      */
     protected function summarise_section(\section_info $sectioninfo, array $activities): array {
@@ -503,7 +505,7 @@ class engagement_service {
     /**
      * Build a distribution chart model.
      *
-     * @param array<string, int> $distribution
+     * @param array $distribution
      * @return array<string, mixed>
      */
     protected function build_distribution_chart(array $distribution): array {
@@ -604,7 +606,7 @@ class engagement_service {
      * Completion counts by activity.
      *
      * @param int $courseid
-     * @param array<int, int> $userids
+     * @param array $userids
      * @return array<int, int>
      */
     protected function get_completion_counts(int $courseid, array $userids): array {
@@ -662,7 +664,7 @@ class engagement_service {
      * Grade counts by activity.
      *
      * @param int $courseid
-     * @param array<int, int> $userids
+     * @param array $userids
      * @param bool $canviewhiddengrades
      * @return array<int, int>
      */
@@ -811,7 +813,7 @@ class engagement_service {
      *
      * @param int $courseid
      * @param int $cmid
-     * @param array<int, \stdClass> $enrolledusers
+     * @param array $enrolledusers
      * @param bool $showemail
      * @return array<int, array<string, string>>
      */
@@ -857,7 +859,7 @@ class engagement_service {
      *
      * @param int $courseid
      * @param int $cmid
-     * @param array<int, \stdClass> $enrolledusers
+     * @param array $enrolledusers
      * @param bool $showemail
      * @return array<int, array<string, string>>
      */
@@ -896,7 +898,7 @@ class engagement_service {
      * Get graded students for a module.
      *
      * @param \grade_item $gradeitem
-     * @param array<int, \stdClass> $enrolledusers
+     * @param array $enrolledusers
      * @param bool $showemail
      * @return array<int, array<string, string>>
      */
@@ -938,7 +940,7 @@ class engagement_service {
      * Get not graded students for a module.
      *
      * @param \grade_item $gradeitem
-     * @param array<int, \stdClass> $enrolledusers
+     * @param array $enrolledusers
      * @param bool $showemail
      * @return array<int, array<string, string>>
      */
@@ -1098,7 +1100,7 @@ class engagement_service {
      *
      * @param int $courseid
      * @param int $cmid
-     * @param array<int, int> $enrolleduserids
+     * @param array $enrolleduserids
      * @return array<int, int>
      */
     protected function get_completed_student_ids(int $courseid, int $cmid, array $enrolleduserids): array {
@@ -1133,7 +1135,7 @@ class engagement_service {
      * Get graded student ids for a grade item.
      *
      * @param \grade_item $gradeitem
-     * @param array<int, int> $enrolleduserids
+     * @param array $enrolleduserids
      * @return array<int, int>
      */
     protected function get_graded_student_ids(\grade_item $gradeitem, array $enrolleduserids): array {
@@ -1175,7 +1177,7 @@ class engagement_service {
      * Count distinct active students for the selected period.
      *
      * @param int $courseid
-     * @param array<int, int> $userids
+     * @param array $userids
      * @param int $from
      * @param int $to
      * @return int
