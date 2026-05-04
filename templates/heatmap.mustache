@@ -1,5 +1,57 @@
 {{!
     This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package    local_courseheatmappro
+    @copyright  2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
+    @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{!
+    @template local_courseheatmappro/heatmap
+
+    Section and activity heatmap for the selected course.
+
+    Context variables required for this template:
+    * sectionheatmaplabel - Section heatmap heading
+    * activityheatmaplabel - Activity heatmap heading
+    * heatmapnote - Supporting note
+    * hasactivities - Whether there are activities to display
+    * sectionheatmap - Section summary rows
+    * activityheatmap - Activity summary rows
+    * legend - Legend rows
+    * emptycoursemessage - Empty state message when no activities exist
+    * nocompletiontrackingnote - Completion tracking note
+
+    Example context (json):
+    {
+        "sectionheatmaplabel": "Section heatmap",
+        "activityheatmaplabel": "Activity and resource heatmap",
+        "heatmapnote": "Scores are derived from course access, completion, and grade signals within the selected period.",
+        "hasactivities": true,
+        "sectionheatmap": [
+            {"stateclass": "is-medium", "name": "Section 1", "score": 72, "activitycountlabel": "4 activities", "trackablecountlabel": "3 trackable modules", "nocompletioncountlabel": "1 modules without completion tracking"}
+        ],
+        "activityheatmap": [
+            {"stateclass": "is-high", "hidden": false, "hasactivityurl": true, "activityurl": "/mod/page/view.php?id=5", "name": "Page 1. Welcome reading.", "engagementavailable": true, "engagementpercentage": 85, "trackingstatus": "Completion tracking enabled", "sectionname": "Section 1", "moduletype": "Activity", "completiontracking": true, "completeduserslabel": "Completed users", "completioncount": 3, "notcompleteduserslabel": "Not completed users", "notcompletioncount": 1, "gradeavailable": true, "gradeuserslabel": "Graded users", "gradecount": 2, "notgradeduserslabel": "Not graded users", "notgradedcount": 2, "enrolledcount": 4, "engagementlevellabel": "Engagement level", "engagementlabel": "High engagement", "suggestedactionlabel": "Suggested action", "suggestedaction": "Keep this activity as a reference model for the course.", "viewcompletedstudentslabel": "View completed students", "viewnotcompletedstudentslabel": "View not completed students", "viewgradedstudentslabel": "View graded students", "viewnotgradedstudentslabel": "View not graded students"}
+        ],
+        "legend": [
+            {"label": "High engagement", "stateclass": "is-high"}
+        ],
+        "emptycoursemessage": "This course does not contain visible modules for the selected view.",
+        "nocompletiontrackingnote": "Modules without completion tracking are shown separately and are not treated as failures."
+    }
 }}
 <details class="lchp-panel" open>
     <summary class="lchp-panel__summary">{{sectionheatmaplabel}}</summary>

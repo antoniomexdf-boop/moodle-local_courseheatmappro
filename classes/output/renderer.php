@@ -16,8 +16,6 @@
 
 namespace local_courseheatmappro\output;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Renderer for local_courseheatmappro.
  *

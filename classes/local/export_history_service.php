@@ -16,8 +16,6 @@
 
 namespace local_courseheatmappro\local;
 
-defined('MOODLE_INTERNAL') || die();
-
 use stdClass;
 
 /**

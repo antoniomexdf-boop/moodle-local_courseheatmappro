@@ -14,12 +14,18 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Version metadata for local_courseheatmappro.
+ *
+ * @package   local_courseheatmappro
+ * @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 defined('MOODLE_INTERNAL') || die();
 
-// Version metadata for local_courseheatmappro.
-
 $plugin->component = 'local_courseheatmappro';
-$plugin->version = 2026050403;
+$plugin->version = 2026050406;
 $plugin->requires = 2022112800; // Moodle 4.1+.
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = '0.2.2';
+$plugin->release = '0.2.5';

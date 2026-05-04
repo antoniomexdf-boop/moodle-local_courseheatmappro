@@ -16,13 +16,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-/**
- * Capability definitions for local_courseheatmappro.
- *
- * @package   local_courseheatmappro
- * @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+// Capability definitions for local_courseheatmappro.
 
 $capabilities = [
     'local/courseheatmappro:view' => [

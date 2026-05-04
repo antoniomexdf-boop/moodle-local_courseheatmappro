@@ -16,8 +16,6 @@
 
 namespace local_courseheatmappro\local;
 
-defined('MOODLE_INTERNAL') || die();
-
 use context_course;
 use moodle_url;
 use stdClass;
@@ -67,7 +65,8 @@ class engagement_service {
         global $USER;
 
         $systemcontext = \context_system::instance();
-        if ($userid === (int)$USER->id && (is_siteadmin($USER->id) || has_capability('local/courseheatmappro:view', $systemcontext))) {
+        if ($userid === (int)$USER->id &&
+                (is_siteadmin($USER->id) || has_capability('local/courseheatmappro:view', $systemcontext))) {
             $courses = get_courses('all', 'c.fullname ASC', 'c.*');
         } else {
             $courses = get_user_capability_course(
@@ -450,7 +449,9 @@ class engagement_service {
             'enrolledcount' => $enrolledcount,
             'engagementpercentage' => $engagementpercentage,
             'engagementavailable' => $engagementavailable,
-            'engagementlabel' => $engagementavailable ? $this->engagement_label($engagementpercentage) : get_string('engagementnotavailable', 'local_courseheatmappro'),
+            'engagementlabel' => $engagementavailable
+                ? $this->engagement_label($engagementpercentage)
+                : get_string('engagementnotavailable', 'local_courseheatmappro'),
             'suggestedaction' => $suggestedaction,
             'hidden' => $hidden,
         ];
@@ -480,7 +481,9 @@ class engagement_service {
 
         return [
             'sectionnumber' => (int)$sectioninfo->section,
-            'name' => format_string($name !== '' ? $name : get_string('sectiontitle', 'local_courseheatmappro', $sectioninfo->section)),
+            'name' => format_string(
+                $name !== '' ? $name : get_string('sectiontitle', 'local_courseheatmappro', $sectioninfo->section)
+            ),
             'score' => $score,
             'state' => $state,
             'stateclass' => $stateclass,
@@ -489,7 +492,11 @@ class engagement_service {
             'nocompletioncount' => count($activities) - count($trackable),
             'activitycountlabel' => get_string('activitiescount', 'local_courseheatmappro', count($activities)),
             'trackablecountlabel' => get_string('trackedmodulescount', 'local_courseheatmappro', count($trackable)),
-            'nocompletioncountlabel' => get_string('nocompletioncount', 'local_courseheatmappro', count($activities) - count($trackable)),
+            'nocompletioncountlabel' => get_string(
+                'nocompletioncount',
+                'local_courseheatmappro',
+                count($activities) - count($trackable)
+            ),
         ];
     }
 

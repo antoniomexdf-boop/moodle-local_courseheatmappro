@@ -16,8 +16,6 @@
 
 namespace local_courseheatmappro\local;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * CSV export data builder for Course Engagement Map Pro.
  *

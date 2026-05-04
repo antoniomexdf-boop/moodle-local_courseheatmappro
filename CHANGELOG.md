@@ -23,3 +23,21 @@
 - Added not completed and not graded student modal drill-downs.
 - Fixed CI compliance issues in PHP, AMD, and CSS sources.
 - Refreshed the screenshot set and aligned public repository metadata.
+
+## 0.2.3
+
+- Added full Mustache template documentation and example contexts.
+- Cleaned remaining PHPCS blockers in version metadata, capabilities, and autoloaded classes.
+- Refined dashboard markup and CSS for stricter CI validation.
+
+## 0.2.4
+
+- Completed the second CI cleanup pass with template documentation and example contexts.
+- Removed unnecessary `MOODLE_INTERNAL` guards from autoloaded classes.
+- Bumped release metadata and XMLDB version for the new package state.
+
+## 0.2.5
+
+- Bumped version metadata for the follow-up CI cleanup pass.
+- Refined template example contexts and dashboard validation data.
+- Aligned release notes, XMLDB version, and upgrade savepoint with the current package state.

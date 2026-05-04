@@ -16,8 +16,6 @@
 
 namespace local_courseheatmappro\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 use context;
 use context_system;
 use core_privacy\local\metadata\collection;

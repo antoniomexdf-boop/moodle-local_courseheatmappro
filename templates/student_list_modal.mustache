@@ -1,8 +1,71 @@
 {{!
     This file is part of Moodle - http://moodle.org/
-    @package local_courseheatmappro
-    @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
-    @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package    local_courseheatmappro
+    @copyright  2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
+    @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{!
+    @template local_courseheatmappro/student_list_modal
+
+    Modal table of students for completed, not completed, graded, and not graded lists.
+
+    Context variables required for this template:
+    * title - Modal title
+    * coursefullname - Course name
+    * activityname - Activity name
+    * courselabel - Course field label
+    * activitylabel - Activity field label
+    * studentnamelabel - Student name label
+    * studentemaillabel - Email label
+    * completionstatuslabel - Completion status label
+    * statuslabel - Generic status label
+    * completiondatelabel - Completion date label
+    * gradelabel - Grade label
+    * emptymessage - Empty state message
+    * showemail - Whether to display email
+    * showcompletiondate - Whether to display completion date
+    * showgrade - Whether to display grades
+    * showstatus - Whether to display status
+    * hasstudents - Whether any students exist
+    * students - Student rows
+
+    Example context (json):
+    {
+        "title": "Completed students",
+        "coursefullname": "Demo course",
+        "activityname": "Page 1. Welcome reading.",
+        "courselabel": "Course",
+        "activitylabel": "Activity title",
+        "studentnamelabel": "Student name",
+        "studentemaillabel": "Email",
+        "completionstatuslabel": "Completion status",
+        "statuslabel": "Status",
+        "completiondatelabel": "Completion date",
+        "gradelabel": "Grade",
+        "emptymessage": "No students found for this activity.",
+        "showemail": true,
+        "showcompletiondate": true,
+        "showgrade": false,
+        "showstatus": false,
+        "hasstudents": true,
+        "students": [
+            {"fullname": "Alice Smith", "email": "alice@example.com", "completionstatus": "Completed", "status": "", "completiondate": "2026-05-04 12:30", "grade": ""}
+        ]
+    }
 }}
 <div class="lchp-modal">
     <p class="lchp-modal__meta"><strong>{{courselabel}}:</strong> {{coursefullname}}</p>
