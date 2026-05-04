@@ -17,3 +17,9 @@
 - Added clickable completed and graded user counts with Moodle modal drill-downs.
 - Added AJAX-backed student list service and server-rendered modal template.
 - Rebuilt AMD assets for the student list modal interaction.
+
+## 0.2.2
+
+- Added not completed and not graded student modal drill-downs.
+- Fixed CI compliance issues in PHP, AMD, and CSS sources.
+- Refreshed the screenshot set and aligned public repository metadata.

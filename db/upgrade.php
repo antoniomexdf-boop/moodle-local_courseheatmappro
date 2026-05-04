@@ -60,5 +60,9 @@ function xmldb_local_courseheatmappro_upgrade(int $oldversion): bool {
         upgrade_plugin_savepoint(true, 2026050402, 'local', 'courseheatmappro');
     }
 
+    if ($oldversion < 2026050403) {
+        upgrade_plugin_savepoint(true, 2026050403, 'local', 'courseheatmappro');
+    }
+
     return true;
 }

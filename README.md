@@ -2,6 +2,8 @@
 
 Course Engagement Map Pro is a Moodle `local` plugin that visualizes course engagement with section and activity heatmaps.
 
+Current release: `0.2.2`
+
 Product page: https://edtech.kaviratech.com/moodle-suite/course-heat-map
 GitHub repository: https://github.com/antoniomexdf-boop/moodle-local_courseheatmappro.git
 
@@ -11,7 +13,7 @@ GitHub repository: https://github.com/antoniomexdf-boop/moodle-local_courseheatm
 - Section-level heatmap
 - Activity-level heatmap
 - Engagement summary
-- Clickable completed and graded user counts with Moodle modals
+- Clickable completed, not completed, graded, and not graded user counts with Moodle modals
 - CSV export by course
 - Moodle 4.1+ compatibility
 
