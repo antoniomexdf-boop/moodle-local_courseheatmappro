@@ -54,35 +54,24 @@ If a metric cannot be derived from the safe Moodle tables listed above, it is ma
 
 ## Screenshots
 
-The repository-ready screenshot set is prepared in `screenshots/` under the plugin root and embedded below for GitHub visibility.
+The repository-ready screenshot set is prepared in `screenshots/` under the plugin root and is embedded below for GitHub.
 
 Recommended file names:
 
-- `01-dashboard-overview.svg`
-- `02-course-heatmap.svg`
-- `03-completed-users-modal.svg`
-- `04-not-completed-users-modal.svg`
-- `05-graded-users-modal.svg`
-- `06-not-graded-users-modal.svg`
-- `07-export-history.svg`
-- `08-engagement-distribution.svg`
-
-These previews can be replaced with real runtime captures from `/Applications/MAMP/htdocs/moodle/local/courseheatmappro` before packaging if needed.
+- `01-dashboard.png` - Dashboard landing page with course and period selectors.
+- `02-heatmap.png` - Heatmap overview with section and activity summaries.
+- `03-activity.png` - Activity detail and user-count action area.
+- `04-modal.png` - Student modal example with completed or graded users.
+- `05-export.png` - Export history and download area.
 
 ### Preview Set
 
-![Dashboard overview](screenshots/01-dashboard-overview.svg)
+![Dashboard](screenshots/01-dashboard.png)
 
-![Course heatmap](screenshots/02-course-heatmap.svg)
+![Heatmap](screenshots/02-heatmap.png)
 
-![Completed users modal](screenshots/03-completed-users-modal.svg)
+![Activity view](screenshots/03-activity.png)
 
-![Not completed users modal](screenshots/04-not-completed-users-modal.svg)
+![Modal view](screenshots/04-modal.png)
 
-![Graded users modal](screenshots/05-graded-users-modal.svg)
-
-![Not graded users modal](screenshots/06-not-graded-users-modal.svg)
-
-![Export history](screenshots/07-export-history.svg)
-
-![Engagement distribution](screenshots/08-engagement-distribution.svg)
+![Export view](screenshots/05-export.png)
