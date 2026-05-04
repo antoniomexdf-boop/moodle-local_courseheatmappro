@@ -53,3 +53,9 @@
 - Fixed the remaining PHPDoc checker complaints in `engagement_service`.
 - Bumped release metadata and XMLDB version for the validation fix.
 - Aligned the changelog and README with the new release state.
+
+## 0.2.8
+
+- Refreshed the screenshot assets for the release package.
+- Bumped version metadata and XMLDB savepoints for the screenshot update.
+- Prepared the Marketplace ZIP from a clean staging copy.

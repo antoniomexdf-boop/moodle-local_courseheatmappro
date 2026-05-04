@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_courseheatmappro';
-$plugin->version = 2026050408;
+$plugin->version = 2026050409;
 $plugin->requires = 2022112800; // Moodle 4.1+.
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = '0.2.7';
+$plugin->release = '0.2.8';
