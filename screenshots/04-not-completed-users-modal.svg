@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Not completed users modal</title>
+  <desc id="desc">Not completed students modal showing enrolled students missing completion.</desc>
+  <rect width="1600" height="900" fill="#1f2937"/>
+  <rect x="240" y="120" width="1120" height="660" rx="30" fill="#ffffff"/>
+  <text x="300" y="200" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">Not completed students</text>
+  <text x="300" y="252" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="24">Enrolled students who have not completed the activity.</text>
+  <rect x="300" y="320" width="980" height="54" rx="10" fill="#fee2e2"/>
+  <text x="330" y="355" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="22">Student name | Email | Status</text>
+  <text x="330" y="430" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="22">Dana Lee - Not completed</text>
+  <text x="330" y="486" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="22">Erik Costa - Not completed</text>
+  <text x="330" y="542" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="22">Fiona Ruiz - Not completed</text>
+</svg>

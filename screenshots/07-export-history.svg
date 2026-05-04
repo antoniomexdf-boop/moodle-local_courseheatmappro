@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Export history</title>
+  <desc id="desc">Export history table with download actions.</desc>
+  <rect width="1600" height="900" fill="#111827"/>
+  <rect x="120" y="120" width="1360" height="660" rx="28" fill="#ffffff"/>
+  <text x="180" y="190" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">Export history</text>
+  <text x="180" y="240" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">Download previous CSV exports from the dashboard.</text>
+  <rect x="180" y="300" width="1240" height="54" rx="10" fill="#e2e8f0"/>
+  <text x="210" y="335" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="20">Time | Course | Type | Filename | Exported by | Download</text>
+  <text x="210" y="410" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="20">2026-05-04 | Demo course | CSV | course-heatmap-5.csv</text>
+  <rect x="1120" y="380" width="160" height="52" rx="26" fill="#2563eb"/>
+  <text x="1166" y="414" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Download</text>
+</svg>

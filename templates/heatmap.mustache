@@ -1,0 +1,134 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+<details class="lchp-panel" open>
+    <summary class="lchp-panel__summary">{{sectionheatmaplabel}}</summary>
+    <p class="lchp-panel__note">{{heatmapnote}}</p>
+    {{#hasactivities}}
+        <div class="lchp-heatmapgrid">
+            {{#sectionheatmap}}
+                <article class="lchp-heatmapitem {{stateclass}}">
+                    <div class="lchp-heatmapitem__head">
+                        <h3 class="lchp-heatmapitem__title">{{name}}</h3>
+                        <span class="lchp-heatmapitem__score">{{score}}%</span>
+                    </div>
+                    <p class="lchp-heatmapitem__meta">{{activitycountlabel}}</p>
+                    <p class="lchp-heatmapitem__meta">{{trackablecountlabel}}</p>
+                    <p class="lchp-heatmapitem__meta">{{nocompletioncountlabel}}</p>
+                </article>
+            {{/sectionheatmap}}
+        </div>
+    {{/hasactivities}}
+    {{^hasactivities}}
+        <p class="lchp-emptycard__text">{{emptycoursemessage}}</p>
+    {{/hasactivities}}
+</details>
+
+<details class="lchp-panel" open>
+    <summary class="lchp-panel__summary">{{activityheatmaplabel}}</summary>
+    {{#hasactivities}}
+        <div class="lchp-heatmapgrid">
+            {{#activityheatmap}}
+                <article class="lchp-heatmapitem {{stateclass}} {{#hidden}}is-hidden{{/hidden}}">
+                    <div class="lchp-heatmapitem__head">
+                        <h3 class="lchp-heatmapitem__title">
+                            {{#hasactivityurl}}
+                                <a class="lchp-modulelink" href="{{activityurl}}">{{name}}</a>
+                            {{/hasactivityurl}}
+                            {{^hasactivityurl}}
+                                <span class="lchp-modulelink lchp-modulelink--plain">{{name}}</span>
+                            {{/hasactivityurl}}
+                        </h3>
+                        <span class="lchp-heatmapitem__score">
+                            {{#engagementavailable}}
+                                {{engagementpercentage}}%
+                            {{/engagementavailable}}
+                            {{^engagementavailable}}
+                                {{trackingstatus}}
+                            {{/engagementavailable}}
+                        </span>
+                    </div>
+                    <p class="lchp-heatmapitem__meta">{{sectionname}}</p>
+                    <p class="lchp-heatmapitem__meta">{{moduletype}} · {{trackingstatus}}</p>
+                    {{#completiontracking}}
+                        <p class="lchp-heatmapitem__meta">
+                            <button type="button"
+                                class="lchp-countbutton js-lchp-open-students"
+                                data-courseid="{{courseid}}"
+                                data-cmid="{{cmid}}"
+                                data-listtype="completed"
+                                aria-label="{{viewcompletedstudentslabel}}"
+                                title="{{viewcompletedstudentslabel}}">
+                                {{completeduserslabel}}
+                            </button>
+                            <span class="lchp-countvalue">{{completioncount}}</span>
+                            <span class="lchp-countmeta">/ {{enrolledcount}}</span>
+                        </p>
+                        <p class="lchp-heatmapitem__meta">
+                            <button type="button"
+                                class="lchp-countbutton js-lchp-open-students"
+                                data-courseid="{{courseid}}"
+                                data-cmid="{{cmid}}"
+                                data-listtype="notcompleted"
+                                aria-label="{{viewnotcompletedstudentslabel}}"
+                                title="{{viewnotcompletedstudentslabel}}">
+                                {{notcompleteduserslabel}}
+                            </button>
+                            <span class="lchp-countvalue">{{notcompletioncount}}</span>
+                            <span class="lchp-countmeta">/ {{enrolledcount}}</span>
+                        </p>
+                    {{/completiontracking}}
+                    {{#gradeavailable}}
+                        <p class="lchp-heatmapitem__meta">
+                            <button type="button"
+                                class="lchp-countbutton js-lchp-open-students"
+                                data-courseid="{{courseid}}"
+                                data-cmid="{{cmid}}"
+                                data-listtype="graded"
+                                aria-label="{{viewgradedstudentslabel}}"
+                                title="{{viewgradedstudentslabel}}">
+                                {{gradeuserslabel}}
+                            </button>
+                            <span class="lchp-countvalue">{{gradecount}}</span>
+                            <span class="lchp-countmeta">/ {{enrolledcount}}</span>
+                        </p>
+                        <p class="lchp-heatmapitem__meta">
+                            <button type="button"
+                                class="lchp-countbutton js-lchp-open-students"
+                                data-courseid="{{courseid}}"
+                                data-cmid="{{cmid}}"
+                                data-listtype="notgraded"
+                                aria-label="{{viewnotgradedstudentslabel}}"
+                                title="{{viewnotgradedstudentslabel}}">
+                                {{notgradeduserslabel}}
+                            </button>
+                            <span class="lchp-countvalue">{{notgradedcount}}</span>
+                            <span class="lchp-countmeta">/ {{enrolledcount}}</span>
+                        </p>
+                    {{/gradeavailable}}
+                    <p class="lchp-heatmapitem__meta">{{engagementlevellabel}}: {{engagementlabel}}</p>
+                    <div class="lchp-heatmapitem__action">
+                        <span class="lchp-heatmapitem__actionlabel">{{suggestedactionlabel}}</span>
+                        <p class="lchp-heatmapitem__actiontext">{{suggestedaction}}</p>
+                    </div>
+                </article>
+            {{/activityheatmap}}
+        </div>
+    {{/hasactivities}}
+    {{^hasactivities}}
+        <p class="lchp-emptycard__text">{{emptycoursemessage}}</p>
+    {{/hasactivities}}
+</details>
+
+<details class="lchp-panel">
+    <summary class="lchp-panel__summary">{{heatmaplegendlabel}}</summary>
+    <ul class="lchp-legend">
+        {{#legend}}
+            <li class="lchp-legend__item {{stateclass}}">
+                <span class="lchp-legend__swatch"></span>
+                <span class="lchp-legend__label">{{label}}</span>
+            </li>
+        {{/legend}}
+    </ul>
+    <p class="lchp-panel__note">{{nocompletiontrackingnote}}</p>
+</details>

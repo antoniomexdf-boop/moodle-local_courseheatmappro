@@ -1,0 +1,59 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+    @package local_courseheatmappro
+    @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
+    @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+<div class="lchp-modal">
+    <p class="lchp-modal__meta"><strong>{{courselabel}}:</strong> {{coursefullname}}</p>
+    <p class="lchp-modal__meta"><strong>{{activitylabel}}:</strong> {{activityname}}</p>
+
+    {{#hasstudents}}
+        <div class="table-responsive">
+            <table class="generaltable lchp-modaltable">
+                <thead>
+                    <tr>
+                        <th scope="col">{{studentnamelabel}}</th>
+                        {{#showemail}}
+                            <th scope="col">{{studentemaillabel}}</th>
+                        {{/showemail}}
+                        {{#showcompletiondate}}
+                            <th scope="col">{{completionstatuslabel}}</th>
+                            <th scope="col">{{completiondatelabel}}</th>
+                        {{/showcompletiondate}}
+                        {{#showgrade}}
+                            <th scope="col">{{gradelabel}}</th>
+                        {{/showgrade}}
+                        {{#showstatus}}
+                            <th scope="col">{{statuslabel}}</th>
+                        {{/showstatus}}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#students}}
+                        <tr>
+                            <td>{{fullname}}</td>
+                            {{#showemail}}
+                                <td>{{email}}</td>
+                            {{/showemail}}
+                            {{#showcompletiondate}}
+                                <td>{{completionstatus}}</td>
+                                <td>{{completiondate}}</td>
+                            {{/showcompletiondate}}
+                            {{#showgrade}}
+                                <td>{{grade}}</td>
+                            {{/showgrade}}
+                            {{#showstatus}}
+                                <td>{{status}}</td>
+                            {{/showstatus}}
+                        </tr>
+                    {{/students}}
+                </tbody>
+            </table>
+        </div>
+    {{/hasstudents}}
+
+    {{^hasstudents}}
+        <p class="lchp-modal__empty">{{emptymessage}}</p>
+    {{/hasstudents}}
+</div>

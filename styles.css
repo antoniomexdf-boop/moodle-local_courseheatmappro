@@ -1,0 +1,409 @@
+/**
+ * Course Engagement Map Pro dashboard styles.
+ *
+ * @package   local_courseheatmappro
+ * @copyright 2026 Jesus Antonio Jimenez Aviña <support@kaviratech.com> <moodle@kaviratech.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.lchp-shell {
+    --lchp-bg: #eef4fb;
+    --lchp-surface: #ffffff;
+    --lchp-border: #d0dcee;
+    --lchp-text: #16212f;
+    --lchp-muted: #5b6876;
+    --lchp-high: #2aa36b;
+    --lchp-medium: #2f80ed;
+    --lchp-low: #f08a24;
+    --lchp-none: #d1495b;
+    color: var(--lchp-text);
+    background:
+        radial-gradient(circle at top right, rgba(47, 128, 237, 0.08), transparent 30%),
+        linear-gradient(180deg, var(--lchp-bg), #ffffff 70%);
+    border: 1px solid var(--lchp-border);
+    border-radius: 20px;
+    padding: 28px;
+    margin: 16px 0;
+    box-shadow: 0 16px 40px rgba(20, 42, 73, 0.08);
+}
+
+.lchp-hero,
+.lchp-summary,
+.lchp-panel {
+    background: var(--lchp-surface);
+    border: 1px solid var(--lchp-border);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(20, 42, 73, 0.06);
+}
+
+.lchp-hero {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1.4fr 1fr;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.lchp-title {
+    margin: 0 0 8px;
+    font-size: 2.1rem;
+    line-height: 1.1;
+}
+
+.lchp-subtitle,
+.lchp-meta,
+.lchp-panel__note,
+.lchp-heatmapitem__meta {
+    color: var(--lchp-muted);
+}
+
+.lchp-hero__controls {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.lchp-control--actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lchp-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.lchp-control select {
+    width: 100%;
+}
+
+.lchp-modulelink {
+    color: var(--lchp-medium);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+.lchp-modulelink:hover,
+.lchp-modulelink:focus {
+    color: #1d5fb7;
+    text-decoration: underline;
+}
+
+.lchp-modulelink--plain {
+    color: var(--lchp-text);
+}
+
+.lchp-countbutton {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--lchp-medium);
+    font: inherit;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.lchp-countbutton:hover,
+.lchp-countbutton:focus {
+    color: #1d5fb7;
+}
+
+.lchp-countbutton:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--lchp-medium) 60%, white);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.lchp-countvalue {
+    font-weight: 800;
+    color: var(--lchp-text);
+}
+
+.lchp-summary {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.lchp-chart,
+.lchp-history {
+    margin-bottom: 20px;
+}
+
+.lchp-emptycard {
+    padding: 22px;
+    background: var(--lchp-surface);
+    border: 1px solid var(--lchp-border);
+    border-radius: 16px;
+}
+
+.lchp-emptycard__text {
+    margin: 0;
+    color: var(--lchp-muted);
+}
+
+.lchp-sectiontitle {
+    margin: 0 0 16px;
+    font-size: 1.3rem;
+}
+
+.lchp-summarygrid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.lchp-card {
+    border: 1px solid var(--lchp-border);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.lchp-card__label {
+    display: block;
+    color: var(--lchp-muted);
+    margin-bottom: 8px;
+}
+
+.lchp-card__value {
+    font-size: 1.6rem;
+}
+
+.lchp-panel {
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.lchp-panel > summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.lchp-panel > summary::-webkit-details-marker {
+    display: none;
+}
+
+.lchp-heatmapgrid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.lchp-heatmapitem {
+    border: 1px solid var(--lchp-border);
+    border-radius: 14px;
+    padding: 16px;
+    background: #fbfdff;
+    box-shadow: 0 8px 20px rgba(20, 42, 73, 0.05);
+}
+
+.lchp-heatmapitem.is-hidden {
+    opacity: 0.82;
+    border-style: dashed;
+}
+
+.lchp-heatmapitem__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.lchp-heatmapitem__title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.lchp-heatmapitem__score {
+    font-weight: 700;
+}
+
+.lchp-heatmapitem__action {
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(22, 33, 47, 0.03);
+    color: var(--lchp-text);
+    line-height: 1.45;
+}
+
+.lchp-heatmapitem__actionlabel {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--lchp-muted);
+}
+
+.lchp-heatmapitem__actiontext {
+    margin: 0;
+}
+
+.lchp-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.lchp-legend__item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lchp-legend__swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--lchp-none);
+}
+
+.is-high .lchp-legend__swatch,
+.is-high.lchp-card,
+.is-high.lchp-heatmapitem,
+.is-high.lchp-distribution__card,
+.is-high.lchp-distribution__segment {
+    border-color: color-mix(in srgb, var(--lchp-high) 70%, var(--lchp-border));
+    background: color-mix(in srgb, var(--lchp-high) 16%, white);
+}
+
+.is-medium .lchp-legend__swatch,
+.is-medium.lchp-card,
+.is-medium.lchp-heatmapitem,
+.is-medium.lchp-distribution__card,
+.is-medium.lchp-distribution__segment {
+    border-color: color-mix(in srgb, var(--lchp-medium) 70%, var(--lchp-border));
+    background: color-mix(in srgb, var(--lchp-medium) 16%, white);
+}
+
+.is-low .lchp-legend__swatch,
+.is-low.lchp-card,
+.is-low.lchp-heatmapitem,
+.is-low.lchp-distribution__card,
+.is-low.lchp-distribution__segment {
+    border-color: color-mix(in srgb, var(--lchp-low) 70%, var(--lchp-border));
+    background: color-mix(in srgb, var(--lchp-low) 16%, white);
+}
+
+.is-none .lchp-legend__swatch,
+.is-none.lchp-card,
+.is-none.lchp-heatmapitem,
+.is-none.lchp-distribution__card,
+.is-none.lchp-distribution__segment {
+    border-color: color-mix(in srgb, var(--lchp-none) 70%, var(--lchp-border));
+    background: color-mix(in srgb, var(--lchp-none) 16%, white);
+}
+
+.is-nocompletion .lchp-legend__swatch,
+.is-nocompletion.lchp-card,
+.is-nocompletion.lchp-heatmapitem,
+.is-nocompletion.lchp-distribution__card,
+.is-nocompletion.lchp-distribution__segment {
+    border-color: color-mix(in srgb, #60738a 70%, var(--lchp-border));
+    background: color-mix(in srgb, #60738a 16%, white);
+}
+
+.lchp-distribution {
+    display: grid;
+    gap: 16px;
+}
+
+.lchp-distribution__bar {
+    display: flex;
+    overflow: hidden;
+    min-height: 18px;
+    border-radius: 999px;
+    background: #edf2f7;
+    border: 1px solid var(--lchp-border);
+}
+
+.lchp-distribution__segment {
+    display: block;
+    min-width: 0;
+    height: 18px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.lchp-distribution__grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.lchp-distribution__card {
+    border: 1px solid var(--lchp-border);
+    border-radius: 14px;
+    padding: 16px;
+    display: grid;
+    gap: 4px;
+}
+
+.lchp-distribution__label {
+    color: var(--lchp-muted);
+    font-weight: 600;
+}
+
+.lchp-distribution__value {
+    font-size: 1.5rem;
+}
+
+.lchp-historytable {
+    width: 100%;
+}
+
+.lchp-historytable th,
+.lchp-historytable td {
+    vertical-align: top;
+}
+
+.lchp-inlinehint {
+    color: var(--lchp-muted);
+}
+
+.lchp-modal {
+    display: grid;
+    gap: 12px;
+}
+
+.lchp-modal__meta {
+    margin: 0;
+    color: var(--lchp-muted);
+}
+
+.lchp-modal__empty {
+    margin: 0;
+    color: var(--lchp-muted);
+}
+
+.lchp-modaltable {
+    margin-top: 6px;
+}
+
+.lchp-modaltable th {
+    white-space: nowrap;
+}
+
+.lchp-historytable .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .lchp-hero {
+        grid-template-columns: 1fr;
+    }
+}

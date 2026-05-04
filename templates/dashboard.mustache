@@ -1,0 +1,69 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+<div class="lchp-shell">
+    <section class="lchp-hero">
+        <div class="lchp-hero__content">
+            <h1 class="lchp-title">{{title}}</h1>
+            <p class="lchp-subtitle">{{subtitle}}</p>
+            {{#hascourse}}
+                <p class="lchp-meta">{{coursefullname}} · {{periodlabel}}</p>
+            {{/hascourse}}
+        </div>
+        <form class="lchp-hero__controls" action="{{formaction}}" method="get">
+            <div class="lchp-control">
+                <label for="lchp-courseid" class="lchp-label">{{selectcourselabel}}</label>
+                <select id="lchp-courseid" name="courseid" class="custom-select">
+                    <option value="0">{{choosecourselabel}}</option>
+                    {{#courseoptions}}
+                        <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+                    {{/courseoptions}}
+                </select>
+            </div>
+            <div class="lchp-control">
+                <label for="lchp-period" class="lchp-label">{{selectperiodlabel}}</label>
+                <select id="lchp-period" name="period" class="custom-select">
+                    {{#periodoptions}}
+                        <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+                    {{/periodoptions}}
+                </select>
+            </div>
+            <div class="lchp-control lchp-control--actions">
+                <button type="submit" class="btn btn-primary">{{viewheatmaplabel}}</button>
+                {{#canexport}}
+                    {{#hascourse}}
+                        <a class="btn btn-secondary lchp-export" href="{{exporturl}}">{{exportcsvlabel}}</a>
+                    {{/hascourse}}
+                {{/canexport}}
+            </div>
+        </form>
+    </section>
+
+    {{#hascourse}}
+        <section class="lchp-summary">
+            <h2 class="lchp-sectiontitle">{{executivesummarylabel}}</h2>
+            {{{summaryhtml}}}
+        </section>
+
+        <section class="lchp-chart">
+            {{{distributionhtml}}}
+        </section>
+
+        <section class="lchp-heatmap">
+            {{{heatmaphtml}}}
+        </section>
+
+        {{#canexport}}
+            <section class="lchp-history">
+                {{{historyhtml}}}
+            </section>
+        {{/canexport}}
+    {{/hascourse}}
+
+    {{^hascourse}}
+        <section class="lchp-emptycard">
+            <h2 class="lchp-sectiontitle">{{pluginnamelabel}}</h2>
+            <p class="lchp-emptycard__text">{{emptymessage}}</p>
+        </section>
+    {{/hascourse}}
+</div>

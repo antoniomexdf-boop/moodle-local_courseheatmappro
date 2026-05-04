@@ -1,0 +1,23 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+<details class="lchp-panel" open>
+    <summary class="lchp-panel__summary">{{engagementdistributionlabel}}</summary>
+    <p class="lchp-panel__note">{{distributionhelplabel}}</p>
+    <div class="lchp-distribution">
+        <div class="lchp-distribution__bar" role="img" aria-label="{{engagementdistributionlabel}}">
+            {{#distributionchart.segments}}
+                <span class="lchp-distribution__segment {{stateclass}}" style="width: {{percent}}%;" title="{{label}}: {{count}}"></span>
+            {{/distributionchart.segments}}
+        </div>
+        <div class="lchp-distribution__grid">
+            {{#distributionchart.segments}}
+                <article class="lchp-distribution__card {{stateclass}}">
+                    <span class="lchp-distribution__label">{{label}}</span>
+                    <strong class="lchp-distribution__value">{{count}}</strong>
+                    <span class="lchp-distribution__meta">{{percent}}%</span>
+                </article>
+            {{/distributionchart.segments}}
+        </div>
+    </div>
+</details>

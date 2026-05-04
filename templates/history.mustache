@@ -1,0 +1,44 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+<details class="lchp-panel" open>
+    <summary class="lchp-panel__summary">{{exporthistorylabel}}</summary>
+    {{#hasexporthistory}}
+        <div class="table-responsive">
+            <table class="generaltable lchp-historytable">
+                <thead>
+                    <tr>
+                        <th scope="col">{{exporttimelabel}}</th>
+                        <th scope="col">{{courselabel}}</th>
+                        <th scope="col">{{exporttypelabel}}</th>
+                        <th scope="col">{{filenamelabel}}</th>
+                        <th scope="col">{{exportedbylabel}}</th>
+                        <th scope="col">{{downloadlabel}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#exporthistory}}
+                        <tr>
+                            <td>{{timecreated}}</td>
+                            <td>{{coursefullname}}</td>
+                            <td>{{exporttype}}</td>
+                            <td>{{filename}}</td>
+                            <td>{{exportedby}}</td>
+                            <td>
+                                {{#downloadurl}}
+                                    <a class="btn btn-sm btn-secondary" href="{{downloadurl}}">{{downloadlabel}}</a>
+                                {{/downloadurl}}
+                                {{^downloadurl}}
+                                    <span class="lchp-inlinehint">{{downloadunavailablemessage}}</span>
+                                {{/downloadurl}}
+                            </td>
+                        </tr>
+                    {{/exporthistory}}
+                </tbody>
+            </table>
+        </div>
+    {{/hasexporthistory}}
+    {{^hasexporthistory}}
+        <p class="lchp-emptycard__text">{{emptyhistorymessage}}</p>
+    {{/hasexporthistory}}
+</details>
