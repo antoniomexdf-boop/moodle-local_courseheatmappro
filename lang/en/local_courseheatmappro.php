@@ -142,6 +142,7 @@ $string['privacy:metadata:local_courseheatmappro_exports:filename'] = 'The gener
 $string['privacy:metadata:local_courseheatmappro_exports:filtersjson'] = 'The technical filters used to generate the export.';
 $string['privacy:metadata:local_courseheatmappro_exports:timecreated'] = 'The time when the export was created.';
 
-$string['local/courseheatmappro:view'] = 'View Course Engagement Map Pro dashboard';
-$string['local/courseheatmappro:viewcourse'] = 'View course engagement map';
-$string['local/courseheatmappro:export'] = 'Export course engagement map data';
+$string['courseheatmappro:view'] = 'View Course Engagement Map Pro dashboard';
+$string['courseheatmappro:viewcourse'] = 'View course engagement map';
+$string['courseheatmappro:export'] = 'Export course engagement map data';
+$string['courseheatmappro:configure'] = 'Configure Course Engagement Map Pro';

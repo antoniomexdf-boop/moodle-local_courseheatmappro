@@ -59,3 +59,9 @@
 - Refreshed the screenshot assets for the release package.
 - Bumped version metadata and XMLDB savepoints for the screenshot update.
 - Prepared the Marketplace ZIP from a clean staging copy.
+
+## 0.2.9
+
+- Added the capability language strings required by CI.
+- Bumped release metadata and XMLDB version for the language-string fix.
+- Aligned the package version markers with the latest compliance pass.
